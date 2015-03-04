@@ -28,5 +28,9 @@ Thanks the [Slovak WordPress community](http://wp.sk/) and [Webikon](http://www.
 
 == Changelog ==
 
+= 1.0.1 =
+* Added languages and currencies
+* Payment gateway class enhanced
+
 = 1.0.0 =
 * First release

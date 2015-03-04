@@ -48,10 +48,10 @@ if(!class_exists('WI_TrustPay_Response'))
 			}
 			
 			$valid_res = array('0', '1', '2', '3', '1001', '1002', '1003', '1004', '1005', '1006', '1100'); 
-			if(isset($this->fields['RES']) && !in_array($this->fields['RES'], $valid_res))
+			if(!isset($this->fields['RES']) || !in_array($this->fields['RES'], $valid_res))
 				$this->status = self::NOT_VALID;
 					
-			if(isset($this->fields['TSS']) && $this->fields['TSS']!='Y')
+			if(!isset($this->fields['TSS']) || $this->fields['TSS']!='Y')
 				$this->status = self::NOT_VALID;
 					
 			if($this->status==self::INIT)
@@ -67,7 +67,7 @@ if(!class_exists('WI_TrustPay_Response'))
 	        if($this->status!=self::VALID)
 	        	return;
 			
-			if(!isset($this->fields['SIG']) || empty($this->fields['SIG']))
+			if(empty($this->fields['SIG']))
 	        {
 				$this->status = self::SIGN_NOT_SIGNED;
 				$this->result = self::RES_NOTSIGNED;

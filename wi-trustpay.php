@@ -60,38 +60,41 @@ if(!class_exists('WI_Trustpay'))
 	    static function get_valid_currencies()
 	    {
 	    	return array(
-	    		'EUR' => 'EUR',
-                'CZK' => 'CZK',
-                'GBP' => 'GBP',
-                'HUF' => 'HUF',
-                'PLN' => 'PLN',
-                'USD' => 'USD',
-                'RON' => 'RON',
-                'BGN' => 'BGN',
-                'HRK' => 'HRK',
-                'LTL' => 'LTL',
-                'TRY' => 'TRY'
+				'BGN' => 'BGN',
+				'CZK' => 'CZK',
+				'EUR' => 'EUR',
+				'GBP' => 'GBP',
+				'HRK' => 'HRK',
+				'HUF' => 'HUF',
+				'NOK' => 'NOK',
+				'RON' => 'RON',
+				'TRY' => 'TRY',
+				'USD' => 'USD'
 	    	);
 	    }
 
 	    static function get_valid_languages()
 	    {
 			return array(
-				'bg' => 'bg', 
-				'bs' => 'bs', 
-				'cs' => 'cs', 
-				'en' => 'en', 
-				'et' => 'et', 
-				'hr' => 'hr', 
-				'hu' => 'hu', 
-				'lt' => 'lt', 
-				'lv' => 'lv', 
-				'pl' => 'pl', 
-				'ro' => 'ro', 
-				'ru' => 'ru', 
-				'sk' => 'sk', 
-				'sl' => 'sl', 
-				'sr' => 'sr'
+				'bg' => 'bg',
+				'bs' => 'bs',
+				'cs' => 'cs',
+				'de' => 'de',
+				'en' => 'en',
+				'es' => 'es',
+				'et' => 'et',
+				'hr' => 'hr',
+				'hu' => 'hu',
+				'it' => 'it',
+				'lt' => 'lt',
+				'lv' => 'lv',
+				'pl' => 'pl',
+				'ro' => 'ro',
+				'ru' => 'ru',
+				'sk' => 'sk',
+				'sl' => 'sl',
+				'sr' => 'sr',
+				'uk' => 'uk'		
 			);
 		}
 	}
