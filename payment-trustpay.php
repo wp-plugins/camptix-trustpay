@@ -111,6 +111,7 @@ class CampTix_Payment_Method_TrustPay extends CampTix_Payment_Method {
 		{
 			if($response->AMT==sprintf("%01.2F", floatval($order['total'])))
 			{
+				$this->log( __('Payment Completed.', 'camptix_trustcard'), $order['attendee_id'] );
 				return $this->payment_result( $payment_token, CampTix_Plugin::PAYMENT_STATUS_COMPLETED, $payment_data );
 			}
 			else
