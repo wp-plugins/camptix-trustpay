@@ -44,9 +44,9 @@ class CampTix_Payment_Method_TrustPay extends CampTix_Payment_Method {
 	 * validate them all in validate_options.
 	 */
 	function payment_settings_fields() {
-		$this->add_settings_field_helper( 'merchant_id', __( 'Merchant AID', 'camptix' ), array( $this, 'field_text' ) );
-		$this->add_settings_field_helper( 'secure_key', __( 'Secret key', 'camptix' ), array( $this, 'field_text' ) );
-		$this->add_settings_field_helper( 'is_test', __( 'Test mode', 'camptix' ), array( $this, 'field_yesno' ) );
+		$this->add_settings_field_helper( 'merchant_id', __( 'Merchant AID', 'camptix_trustpay' ), array( $this, 'field_text' ) );
+		$this->add_settings_field_helper( 'secure_key', __( 'Secret key', 'camptix_trustpay' ), array( $this, 'field_text' ) );
+		$this->add_settings_field_helper( 'is_test', __( 'Test mode', 'camptix_trustpay' ), array( $this, 'field_yesno' ) );
 	}
 
 	/**
@@ -154,7 +154,7 @@ class CampTix_Payment_Method_TrustPay extends CampTix_Payment_Method {
 		$currency = $this->camptix_options['currency'];
 
 		if ( ! in_array( $currency, $this->supported_currencies ) )
-			die( __( 'The selected currency is not supported by this payment method.', 'camptix' ) );
+			die( __( 'The selected currency is not supported by this payment method.', 'camptix_trustpay' ) );
 
 		$is_test = (!empty($this->options['is_test']) && $this->options['is_test']) ? true : false;
 

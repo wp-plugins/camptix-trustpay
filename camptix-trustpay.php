@@ -4,7 +4,7 @@ Plugin Name: CampTix TrustPay
 Plugin URI: http://platobnebrany.sk/
 Description: TrustPay Payment Gateway for CampTix Event Ticketing.
 Author: Webikon (Ján Bočínec)
-Version: 1.0.3
+Version: 1.0.4
 Author URI: http://www.webikon.sk
 License: GPLv2
 */

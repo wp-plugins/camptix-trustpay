@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: camptix, trustpay
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,9 @@ Thanks the [Slovak WordPress community](http://wp.sk/) and [Webikon](http://www.
 1. Go to `Tickets -> Setup` in your WordPress admin area to set the currency and activate the TrustPay gateway.
 
 == Changelog ==
+
+= 1.0.4 =
+* Tiny enhancements
 
 = 1.0.3 =
 * Added “Payment Completed.” log
