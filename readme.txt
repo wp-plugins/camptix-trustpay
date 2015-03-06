@@ -28,6 +28,9 @@ Thanks the [Slovak WordPress community](http://wp.sk/) and [Webikon](http://www.
 
 == Changelog ==
 
+= 1.0.5 =
+* Payment logic fix
+
 = 1.0.4 =
 * Tiny enhancements
 

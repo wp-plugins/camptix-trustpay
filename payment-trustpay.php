@@ -5,7 +5,7 @@ class CampTix_Payment_Method_TrustPay extends CampTix_Payment_Method {
 	 * The following variables are required for every payment method.
 	 */
 	public $id = 'trustpay';
-	public $name = 'TrustPay';
+	public $name = 'TrustPay - Online Banking';
 	public $description = 'PayPal Express Checkout';
 	//array( 'BGN', 'CZK', 'EUR', 'GBP', 'HRK', 'HUF', 'NOK', 'RON', 'TRY', 'USD' );
 	public $supported_currencies = array( 'BGN', 'CZK', 'EUR', 'GBP', 'HRK', 'HUF', 'NOK', 'RON', 'TRY', 'USD' );
@@ -80,6 +80,11 @@ class CampTix_Payment_Method_TrustPay extends CampTix_Payment_Method {
 			//die( 'empty token' );
 
 		$order = $this->get_order( $payment_token );
+
+		if ( get_post_status( $order['attendee_id'] ) == 'publish' ) {
+			wp_redirect( $this->get_tickets_url() );
+			exit;
+		}
 
 		if ( ! $order )
 			die( 'could not find order' );
